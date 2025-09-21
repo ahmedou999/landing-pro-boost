@@ -4,40 +4,39 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FAQSection = () => {
+  const { language, t } = useLanguage();
+  
   const faqs = [
     {
-      question: "Combien de temps pour livrer ma landing page ?",
-      answer: "Nous garantissons une livraison en 7 jours maximum. Notre processus optimisé nous permet de respecter ce délai tout en maintenant une qualité élevée."
+      question: t('faq.q1'),
+      answer: t('faq.a1')
     },
     {
-      question: "Puis-je modifier la page après livraison ?",
-      answer: "Oui, absolument ! Nous vous fournissons tous les accès nécessaires. De plus, avec l'abonnement mensuel à 25€, les petites modifications sont incluses."
+      question: t('faq.q2'),
+      answer: t('faq.a2')
     },
     {
-      question: "Que couvre exactement l'abonnement de 25€/mois ?",
-      answer: "L'abonnement inclut : hébergement haute performance, certificat SSL, sauvegardes automatiques, mises à jour de sécurité, support technique et petites améliorations (changement de texte, couleurs, etc.)."
+      question: t('faq.q3'),
+      answer: t('faq.a3')
     },
     {
-      question: "Que se passe-t-il si j'arrête l'abonnement ?",
-      answer: "Aucun problème ! Nous vous transférons votre nom de domaine et tous les fichiers du site. Vous gardez la propriété complète de votre landing page."
+      question: t('faq.q4'),
+      answer: t('faq.a4')
     },
     {
-      question: "Offrez-vous un remboursement si je ne suis pas satisfait ?",
-      answer: "Nous ne proposons pas de remboursement, mais trois révisions sont incluses pour s'assurer que la page corresponde parfaitement à vos attentes. Notre processus de validation étape par étape garantit votre satisfaction."
+      question: t('faq.q7'),
+      answer: t('faq.a7')
     },
     {
-      question: "Ma landing page sera-t-elle optimisée pour mobile ?",
-      answer: "Bien sûr ! Toutes nos landing pages sont conçues en mobile-first. Elles s'adaptent parfaitement à tous les écrans : smartphone, tablette et desktop."
+      question: t('faq.q5'),
+      answer: t('faq.a5')
     },
     {
-      question: "Pouvez-vous intégrer mes outils existants ?",
-      answer: "Oui, nous intégrons facilement les outils les plus utilisés comme WhatsApp, Calendly, Google Analytics, Facebook Pixel ou encore Mailchimp. Pour d'autres intégrations spécifiques, nous étudions la faisabilité au cas par cas."
-    },
-    {
-      question: "Qu'est-ce qui est inclus dans le copywriting ?",
-      answer: "Nous rédigeons tous les textes de votre page : titre principal, sous-titres, descriptions d'offres, call-to-actions, et contenus de conversion optimisés selon les meilleures pratiques."
+      question: t('faq.q6'),
+      answer: t('faq.a6')
     }
   ];
 
@@ -48,10 +47,10 @@ const FAQSection = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="section-title">
-              Questions fréquentes
+              {t('faq.title')}
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Tout ce que vous devez savoir sur nos landing pages haute conversion.
+              {t('faq.subtitle')}
             </p>
           </div>
           

@@ -1,21 +1,24 @@
 import { AlertTriangle, Users, Clock, Target } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProblemsSection = () => {
+  const { t } = useLanguage();
+  
   const problems = [
     {
       icon: Users,
-      title: "Trop de visiteurs mais peu de clients",
-      description: "Votre site attire du trafic mais ne convertit pas vos visiteurs en clients payants."
+      title: t('problems.problem1.title'),
+      description: t('problems.problem1.desc')
     },
     {
       icon: AlertTriangle,
-      title: "Pas de crédibilité en ligne",
-      description: "Votre présence digitale ne reflète pas le professionnalisme de votre expertise."
+      title: t('problems.problem2.title'),
+      description: t('problems.problem2.desc')
     },
     {
       icon: Clock,
-      title: "Trop de temps perdu à expliquer",
-      description: "Vous passez des heures à expliquer votre offre au lieu de vendre."
+      title: t('problems.problem3.title'),
+      description: t('problems.problem3.desc')
     }
   ];
 
@@ -26,10 +29,10 @@ const ProblemsSection = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="section-title">
-              Ces problèmes vous empêchent de développer votre business
+              {t('problems.title')}
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Sans une landing page optimisée, vous perdez des opportunités chaque jour.
+              {t('problems.subtitle')}
             </p>
           </div>
           
@@ -59,11 +62,10 @@ const ProblemsSection = () => {
             <div className="max-w-3xl mx-auto space-y-4">
               <Target className="w-12 h-12 mx-auto mb-4 text-whatsapp" />
               <h3 className="font-display font-bold text-2xl md:text-3xl">
-                La solution : une landing page claire et optimisée conversion
+                {t('problems.solution.title')}
               </h3>
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
-                Transformez vos visiteurs en clients avec une page qui vend 24h/24, 7j/7, 
-                sans que vous ayez besoin d'être présent.
+                {t('problems.solution.desc')}
               </p>
             </div>
           </div>

@@ -1,34 +1,37 @@
 import { Phone, FileText, Palette, Rocket } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProcessSection = () => {
+  const { language, t } = useLanguage();
+  
   const steps = [
     {
       number: "01",
       icon: Phone,
-      title: "Découverte",
-      description: "Call de 15 minutes pour comprendre votre business, vos objectifs et votre audience cible.",
+      title: t('process.step1.title'),
+      description: t('process.step1.desc'),
       duration: "15 min"
     },
     {
       number: "02", 
       icon: FileText,
-      title: "Brief simple",
-      description: "Questionnaire rapide pour cerner vos besoins : couleurs, style, contenu, intégrations souhaitées.",
+      title: t('process.step2.title'),
+      description: t('process.step2.desc'),
       duration: "5 min"
     },
     {
       number: "03",
       icon: Palette,
-      title: "Création & révisions",
-      description: "Nous créons votre landing page et vous la présentons. 3 révisions incluses pour l'ajuster.",
-      duration: "5-6 jours"
+      title: t('process.step3.title'),
+      description: t('process.step3.desc'),
+      duration: language === 'fr' ? '5-6 jours' : '5-6 days'
     },
     {
       number: "04",
       icon: Rocket,
-      title: "Livraison sous 7 jours",
-      description: "Site livré clé en main avec tous les accès et la documentation. Prêt à convertir !",
-      duration: "Jour 7"
+      title: t('process.step4.title'),
+      description: t('process.step4.desc'),
+      duration: language === 'fr' ? 'Jour 7' : 'Day 7'
     }
   ];
 
@@ -39,10 +42,10 @@ const ProcessSection = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="section-title">
-              Notre processus en 4 étapes simples
+              {t('process.title')}
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              De la première discussion à la mise en ligne : un processus rodé pour des résultats garantis.
+              {t('process.subtitle')}
             </p>
           </div>
           

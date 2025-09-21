@@ -1,26 +1,29 @@
 import { Smartphone, PenTool, Link, Server } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AdvantagesSection = () => {
+  const { t } = useLanguage();
+  
   const advantages = [
     {
       icon: Smartphone,
-      title: "Design responsive (mobile-first)",
-      description: "Parfaitement optimisé pour tous les écrans. 70% de vos visiteurs sont sur mobile, votre page sera donc conçue en priorité pour eux."
+      title: t('advantages.advantage1.title'),
+      description: t('advantages.advantage1.desc')
     },
     {
       icon: PenTool,
-      title: "Copywriting orienté résultats",
-      description: "Textes persuasifs basés sur la psychologie de la vente. Chaque mot est choisi pour inciter à l'action."
+      title: t('advantages.advantage2.title'),
+      description: t('advantages.advantage2.desc')
     },
     {
       icon: Link,
-      title: "Intégration simple",
-      description: "WhatsApp, Calendly, email marketing... Tous vos outils connectés en quelques clics pour automatiser vos ventes."
+      title: t('advantages.advantage3.title'),
+      description: t('advantages.advantage3.desc')
     },
     {
       icon: Server,
-      title: "Hébergement + gestion inclus",
-      description: "Plus de tracas techniques. Nous nous occupons de tout : sécurité, mises à jour, sauvegardes pour seulement 25 €/mois."
+      title: t('advantages.advantage4.title'),
+      description: t('advantages.advantage4.desc')
     }
   ];
 
@@ -31,10 +34,10 @@ const AdvantagesSection = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="section-title">
-              Pourquoi choisir nos landing pages ?
+              {t('advantages.title')}
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Nous combinons design moderne, copywriting persuasif et technologie pour maximiser vos conversions.
+              {t('advantages.subtitle')}
             </p>
           </div>
           

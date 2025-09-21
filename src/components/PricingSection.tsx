@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Check, Star, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PricingSection = () => {
+  const { language, t } = useLanguage();
+  
   return (
     <section id="pricing" className="py-20 bg-surface">
       <div className="section-container">
@@ -9,10 +12,10 @@ const PricingSection = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">
             <h2 className="section-title">
-              Offre & Tarifs
+              {t('pricing.title')}
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Un investissement qui se rentabilise dès le premier client acquis.
+              {t('pricing.subtitle')}
             </p>
           </div>
           
@@ -29,23 +32,22 @@ const PricingSection = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-display font-bold text-2xl text-primary mb-2">
-                    Pack Landing Page
+                    {t('pricing.pack.title')}
                   </h3>
                   <div className="flex items-baseline space-x-2">
-                    <span className="font-display font-bold text-4xl text-primary">890 €</span>
-                    <span className="text-muted-foreground">une seule fois</span>
+                    <span className="font-display font-bold text-4xl text-primary">{t('pricing.pack.price')}</span>
+                    <span className="text-muted-foreground">{t('pricing.pack.subtitle')}</span>
                   </div>
                 </div>
                 
                 <ul className="space-y-3">
                   {[
-                    "Site complet responsive",
-                    "Design sur-mesure",
-                    "Copywriting optimisé conversion",
-                    "Intégrations WhatsApp & Calendly",
-                    "Optimisation SEO de base",
-                    "3 révisions incluses",
-                    "Livraison en 7 jours garanti"
+                    t('pricing.pack.feature1'),
+                    t('pricing.pack.feature2'),
+                    t('pricing.pack.feature3'),
+                    t('pricing.pack.feature4'),
+                    t('pricing.pack.feature5'),
+                    t('pricing.pack.feature6')
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <Check className="w-5 h-5 text-success flex-shrink-0" />
@@ -56,10 +58,10 @@ const PricingSection = () => {
                 
                 <Button
                   className="btn-whatsapp w-full text-lg py-4"
-                  onClick={() => window.open('https://wa.me/33123456789?text=Bonjour, je souhaite commander le Pack Landing Page à 890€', '_blank')}
+                  onClick={() => window.open(`https://wa.me/33123456789?text=${language === 'fr' ? 'Bonjour, je souhaite commander le Pack Landing Page à 890€' : 'Hello, I would like to order the Complete Landing Page Package at €890'}`, '_blank')}
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Commander maintenant
+                  {t('pricing.pack.cta')}
                 </Button>
               </div>
             </div>
@@ -69,26 +71,25 @@ const PricingSection = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-display font-bold text-2xl text-primary mb-2">
-                    Abonnement Mensuel
+                    {t('pricing.hosting.title')}
                   </h3>
                   <div className="flex items-baseline space-x-2">
-                    <span className="font-display font-bold text-4xl text-primary">25 €</span>
-                    <span className="text-muted-foreground">/mois</span>
+                    <span className="font-display font-bold text-4xl text-primary">{t('pricing.hosting.price')}</span>
+                    <span className="text-muted-foreground">{t('pricing.hosting.subtitle')}</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Recommandé après la livraison
+                    {language === 'fr' ? 'Recommandé après la livraison' : 'Recommended after delivery'}
                   </p>
                 </div>
                 
                 <ul className="space-y-3">
                   {[
-                    "Hébergement haute performance",
-                    "Certificat SSL inclus",
-                    "Sauvegardes automatiques",
-                    "Mises à jour de sécurité",
-                    "Support technique",
-                    "Petites modifications incluses",
-                    "Statistiques de performance"
+                    t('pricing.hosting.feature1'),
+                    t('pricing.hosting.feature2'),
+                    t('pricing.hosting.feature3'),
+                    t('pricing.hosting.feature4'),
+                    t('pricing.hosting.feature5'),
+                    t('pricing.hosting.feature6')
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <Check className="w-5 h-5 text-success flex-shrink-0" />
@@ -100,9 +101,9 @@ const PricingSection = () => {
                 <Button
                   variant="outline"
                   className="btn-secondary w-full text-lg py-4"
-                  onClick={() => window.open('https://wa.me/33123456789?text=Bonjour, je souhaite en savoir plus sur l\'abonnement mensuel', '_blank')}
+                  onClick={() => window.open(`https://wa.me/33123456789?text=${language === 'fr' ? 'Bonjour, je souhaite en savoir plus sur l\'abonnement mensuel' : 'Hello, I would like to know more about the monthly subscription'}`, '_blank')}
                 >
-                  En savoir plus
+                  {language === 'fr' ? 'En savoir plus' : 'Learn more'}
                 </Button>
               </div>
             </div>
