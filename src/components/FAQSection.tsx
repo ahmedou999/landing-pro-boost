@@ -33,7 +33,7 @@ const FAQSection = () => {
     },
     {
       question: "Pouvez-vous intégrer mes outils existants ?",
-      answer: "Oui, nous intégrons facilement WhatsApp, Calendly, Mailchimp, Google Analytics, Facebook Pixel et la plupart des outils marketing populaires."
+      answer: "Oui, nous intégrons facilement les outils les plus utilisés comme WhatsApp, Calendly, Google Analytics, Facebook Pixel ou encore Mailchimp. Pour d'autres intégrations spécifiques, nous étudions la faisabilité au cas par cas."
     },
     {
       question: "Qu'est-ce qui est inclus dans le copywriting ?",
