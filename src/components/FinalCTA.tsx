@@ -48,7 +48,7 @@ const FinalCTA = () => {
               <ArrowRight className="w-5 h-5" />
             </Button>
             
-            <Button variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-4 text-lg w-full sm:w-auto" onClick={() => window.open('https://calendly.com/landingpro/consultation', '_blank')}>
+            <Button variant="outline" size="lg" className="border-black bg-white text-black hover:bg-gray-100 hover:text-black px-8 py-4 text-lg w-full sm:w-auto" onClick={() => window.open('https://calendly.com/landingpro/consultation', '_blank')}>
               <Calendar className="w-6 h-6" />
               Réserver un appel gratuit
             </Button>
