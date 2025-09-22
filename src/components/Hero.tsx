@@ -21,46 +21,37 @@ const Hero = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in slide-in-from-bottom-4 duration-700">
+          <div className="flex justify-center animate-in slide-in-from-bottom-4 duration-700">
             <Button
-              className="btn-whatsapp text-lg px-8 py-4 w-full sm:w-auto"
+              className="btn-whatsapp text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full max-w-sm sm:max-w-md"
               onClick={() => window.open(`https://wa.me/33123456789?text=${language === 'fr' ? 'Bonjour, je souhaite obtenir une landing page haute conversion' : 'Hello, I would like to get a high-conversion landing page'}`, '_blank')}
             >
-              <MessageCircle className="w-5 h-5" />
-              {t('hero.cta.primary')}
-            </Button>
-            
-            <Button
-              variant="outline"
-              className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto"
-              onClick={() => window.open('https://calendly.com/landingpro/consultation', '_blank')}
-            >
-              <Calendar className="w-5 h-5" />
-              {t('hero.cta.secondary')}
+              <MessageCircle className="w-5 h-5 flex-shrink-0" />
+              <span className="text-center">{t('hero.cta.primary')}</span>
             </Button>
           </div>
           
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-12 animate-in slide-in-from-bottom-4 duration-700">
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <div className="p-2 bg-success/10 rounded-full">
-                <CheckCircle className="w-5 h-5 text-success" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto pt-8 md:pt-12 animate-in slide-in-from-bottom-4 duration-700">
+            <div className="flex items-center justify-center space-x-2 md:space-x-3 text-muted-foreground text-sm md:text-base">
+              <div className="p-1.5 md:p-2 bg-success/10 rounded-full flex-shrink-0">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-success" />
               </div>
-              <span className="font-medium">{t('hero.guarantee.delivery')}</span>
+              <span className="font-medium text-center">{t('hero.guarantee.delivery')}</span>
             </div>
             
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <div className="p-2 bg-success/10 rounded-full">
-                <RotateCcw className="w-5 h-5 text-success" />
+            <div className="flex items-center justify-center space-x-2 md:space-x-3 text-muted-foreground text-sm md:text-base">
+              <div className="p-1.5 md:p-2 bg-success/10 rounded-full flex-shrink-0">
+                <RotateCcw className="w-4 h-4 md:w-5 md:h-5 text-success" />
               </div>
-              <span className="font-medium">{t('hero.guarantee.revisions')}</span>
+              <span className="font-medium text-center">{t('hero.guarantee.revisions')}</span>
             </div>
             
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <div className="p-2 bg-success/10 rounded-full">
-                <CreditCard className="w-5 h-5 text-success" />
+            <div className="flex items-center justify-center space-x-2 md:space-x-3 text-muted-foreground text-sm md:text-base sm:col-span-2 lg:col-span-1">
+              <div className="p-1.5 md:p-2 bg-success/10 rounded-full flex-shrink-0">
+                <CreditCard className="w-4 h-4 md:w-5 md:h-5 text-success" />
               </div>
-              <span className="font-medium">{t('hero.guarantee.hosting')}</span>
+              <span className="font-medium text-center">{t('hero.guarantee.hosting')}</span>
             </div>
           </div>
         </div>

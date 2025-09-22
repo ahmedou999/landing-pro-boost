@@ -2,7 +2,7 @@ import { Smartphone, PenTool, Link, Server } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const AdvantagesSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   
   const advantages = [
     {
@@ -42,21 +42,21 @@ const AdvantagesSection = () => {
           </div>
           
           {/* Advantages Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {advantages.map((advantage, index) => (
-              <div key={index} className="bg-card rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 group">
+              <div key={index} className="bg-card rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="space-y-4">
                   {/* Icon */}
-                  <div className="p-4 bg-whatsapp/10 rounded-lg w-fit group-hover:scale-110 transition-transform duration-300">
-                    <advantage.icon className="w-8 h-8 text-whatsapp" />
+                  <div className="p-3 md:p-4 bg-whatsapp/10 rounded-lg w-fit group-hover:scale-110 transition-transform duration-300">
+                    <advantage.icon className="w-6 h-6 md:w-8 md:h-8 text-whatsapp" />
                   </div>
                   
                   {/* Content */}
                   <div>
-                    <h3 className="font-display font-semibold text-xl mb-3 text-primary">
+                    <h3 className="font-display font-semibold text-lg md:text-xl mb-2 md:mb-3 text-primary">
                       {advantage.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                       {advantage.description}
                     </p>
                   </div>
@@ -66,19 +66,19 @@ const AdvantagesSection = () => {
           </div>
           
           {/* CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-whatsapp/5 to-success/5 rounded-xl p-8">
-              <h3 className="font-display font-semibold text-2xl text-primary mb-4">
-                Prêt à booster vos conversions ?
+          <div className="text-center mt-12 md:mt-16">
+            <div className="bg-gradient-to-r from-whatsapp/5 to-success/5 rounded-xl p-6 md:p-8">
+              <h3 className="font-display font-semibold text-xl md:text-2xl text-primary mb-3 md:mb-4">
+                {language === 'fr' ? 'Prêt à booster vos conversions ?' : 'Ready to boost your conversions?'}
               </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Découvrez comment nous pouvons transformer votre business avec une landing page qui convertit.
+              <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 max-w-2xl mx-auto">
+                {language === 'fr' ? 'Découvrez comment nous pouvons transformer votre business avec une landing page qui convertit.' : 'Discover how we can transform your business with a converting landing page.'}
               </p>
               <button 
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-whatsapp"
+                className="btn-whatsapp text-sm md:text-base px-6 py-3 md:px-8 md:py-4"
               >
-                Voir nos tarifs et démarrer
+                {language === 'fr' ? 'Voir nos tarifs et démarrer' : 'View our pricing and get started'}
               </button>
             </div>
           </div>

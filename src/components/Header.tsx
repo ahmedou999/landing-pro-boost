@@ -87,21 +87,12 @@ const Header = () => {
             </div>
             
             <Button
-              className="btn-whatsapp text-sm"
+              className="btn-whatsapp text-xs md:text-sm px-2 md:px-3 py-1.5 md:py-2"
               onClick={() => window.open(`https://wa.me/33123456789?text=${language === 'fr' ? 'Bonjour, je souhaite obtenir une landing page haute conversion' : 'Hello, I would like to get a high-conversion landing page'}`, '_blank')}
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
               <span className="hidden sm:inline">{t('cta.whatsapp')}</span>
               <span className="sm:hidden">{t('cta.whatsapp.short')}</span>
-            </Button>
-            
-            <Button
-              variant="outline"
-              className="btn-secondary text-sm hidden sm:inline-flex"
-              onClick={() => window.open('https://calendly.com/landingpro/consultation', '_blank')}
-            >
-              <Calendar className="w-4 h-4" />
-              {t('cta.call')}
             </Button>
           </div>
         </div>

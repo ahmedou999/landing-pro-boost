@@ -37,18 +37,18 @@ const ProblemsSection = () => {
           </div>
           
           {/* Problems Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {problems.map((problem, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-destructive/10 rounded-lg flex-shrink-0">
-                    <problem.icon className="w-6 h-6 text-destructive" />
+              <div key={index} className="bg-card rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <div className="p-2 md:p-3 bg-destructive/10 rounded-lg flex-shrink-0">
+                    <problem.icon className="w-5 h-5 md:w-6 md:h-6 text-destructive" />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-lg mb-2 text-primary">
+                    <h3 className="font-display font-semibold text-base md:text-lg mb-2 text-primary">
                       {problem.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                       {problem.description}
                     </p>
                   </div>
@@ -58,13 +58,13 @@ const ProblemsSection = () => {
           </div>
           
           {/* Solution */}
-          <div className="bg-primary text-primary-foreground rounded-xl p-8 text-center">
+          <div className="bg-primary text-primary-foreground rounded-xl p-6 md:p-8 text-center">
             <div className="max-w-3xl mx-auto space-y-4">
-              <Target className="w-12 h-12 mx-auto mb-4 text-whatsapp" />
-              <h3 className="font-display font-bold text-2xl md:text-3xl">
+              <Target className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 text-whatsapp" />
+              <h3 className="font-display font-bold text-xl md:text-2xl lg:text-3xl">
                 {t('problems.solution.title')}
               </h3>
-              <p className="text-lg text-primary-foreground/90 leading-relaxed">
+              <p className="text-base md:text-lg text-primary-foreground/90 leading-relaxed">
                 {t('problems.solution.desc')}
               </p>
             </div>
