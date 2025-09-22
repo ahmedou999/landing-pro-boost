@@ -12,60 +12,60 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <nav className="section-container py-4">
+      <nav className="section-container py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="font-display font-bold text-xl text-primary">
+          <div className="font-display font-bold text-lg md:text-xl text-primary flex-shrink-0">
             LandingPro
           </div>
           
-          {/* Navigation Links - Hidden on mobile */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Navigation Links - Hidden on mobile, optimized for tablet */}
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.home')}
             </button>
             <button 
               onClick={() => scrollToSection('advantages')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.advantages')}
             </button>
             <button 
               onClick={() => scrollToSection('process')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.process')}
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.offer')}
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.faq')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
             >
               {t('nav.contact')}
             </button>
           </div>
           
-          {/* Language Selector & CTA Buttons */}
-          <div className="flex items-center gap-3">
+          {/* Language Selector & CTA Buttons - Optimized for tablet */}
+          <div className="flex items-center gap-2 md:gap-3">
             {/* Language Selector */}
             <div className="flex items-center bg-background border border-border rounded-md overflow-hidden">
               <button
                 onClick={() => setLanguage('fr')}
-                className={`px-3 py-1 text-sm font-medium transition-colors ${
+                className={`px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition-colors ${
                   language === 'fr' 
                     ? 'bg-primary text-primary-foreground' 
                     : 'text-foreground hover:bg-accent'
@@ -73,10 +73,10 @@ const Header = () => {
               >
                 FR
               </button>
-              <div className="w-px h-4 bg-border"></div>
+              <div className="w-px h-3 md:h-4 bg-border"></div>
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 text-sm font-medium transition-colors ${
+                className={`px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition-colors ${
                   language === 'en' 
                     ? 'bg-primary text-primary-foreground' 
                     : 'text-foreground hover:bg-accent'

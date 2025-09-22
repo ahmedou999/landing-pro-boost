@@ -44,7 +44,7 @@ const FinalCTA = () => {
           <div className="flex justify-center">
             <Button 
               size="lg" 
-              className="bg-whatsapp hover:bg-whatsapp-hover text-whatsapp-foreground px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold w-full max-w-sm sm:max-w-md shadow-lg hover:shadow-xl transition-all duration-200" 
+              className="btn-whatsapp px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold w-full max-w-sm sm:max-w-md shadow-lg hover:shadow-xl" 
               onClick={() => window.open(`https://wa.me/33123456789?text=${language === 'fr' ? 'Bonjour, je veux démarrer mon projet de landing page maintenant !' : 'Hello, I want to start my landing page project now!'}`, '_blank')}
             >
               <MessageCircle className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
