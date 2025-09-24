@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="font-display font-bold text-lg md:text-xl text-primary flex-shrink-0">
-            LandingPro
+            BoostLandings
           </div>
           
           {/* Navigation Links - Hidden on mobile, optimized for tablet */}
