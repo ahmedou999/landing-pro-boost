@@ -117,7 +117,7 @@ const translations = {
     'final.cta.secondary': 'Réserver un appel gratuit',
     
     // Footer
-    'footer.email': 'contact@landingpro.fr',
+    'footer.email': 'contact@boostlanding.com',
     'footer.legal': 'Mentions légales',
     'footer.terms': 'CGV'
   },
@@ -229,7 +229,7 @@ const translations = {
     'final.cta.secondary': 'Book a Free Call',
     
     // Footer
-    'footer.email': 'contact@landingpro.com',
+    'footer.email': 'contact@boostlanding.com',
     'footer.legal': 'Legal Notice',
     'footer.terms': 'Terms'
   }

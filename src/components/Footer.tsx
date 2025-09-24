@@ -72,7 +72,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               {/* Copyright */}
               <p className="text-muted-foreground text-xs md:text-sm">
-                © 2025 LandingPro. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
+                © 2025 BoostLandings. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
               </p>
               
               {/* Legal Links */}
